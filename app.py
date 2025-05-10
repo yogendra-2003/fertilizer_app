@@ -83,6 +83,7 @@ def add_fertilizer():
 # Edit fertilizer (admin)
 @app.route('/admin/edit/<int:id>', methods=['GET', 'POST'])
 def edit_fertilizer(id):
+    # This is for edit fertlizer
     conn = sqlite3.connect('fertilizers.db')
     cursor = conn.cursor()
     if request.method == 'POST':
