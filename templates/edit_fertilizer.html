@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="mb-4">Edit Fertilizer</h2>
+<form method="post">
+    <div class="mb-3">
+        <label>Name</label>
+        <input type="text" name="name" class="form-control" value="{{ fertilizer[1] }}" required>
+    </div>
+    <div class="mb-3">
+        <label>Price (₹)</label>
+        <input type="number" step="0.01" name="price" class="form-control" value="{{ fertilizer[2] }}" required>
+    </div>
+    <div class="mb-3">
+        <label>Description</label>
+        <textarea name="description" class="form-control">{{ fertilizer[3] }}</textarea>
+    </div>
+    <button class="btn btn-primary">Update Fertilizer</button>
+</form>
+{% endblock %}
